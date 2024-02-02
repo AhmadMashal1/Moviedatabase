@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Database</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+    crossorigin="anonymous"
+  />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Ahmad Mashal - Movie Data</a>
+            <div class="justify-content-end" id="navbarSupportedContent">
+                <form class="d-flex" id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="Title (case sensitive)" id="title">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                    <button class="btn btn btn-danger" type="button" id="clearForm">Clear</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Bootstrap Grid System (1 Column) -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!-- Main Table Skeleton -->
+                <table class="table" id="moviesTable">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Title</th>
+                            <th>Plot</th>
+                            <th>Rating</th>
+                            <th>Run Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="moviesTableBody">
+
+                    </tbody>
+                </table>
+
+                <!-- Paging Control -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" id="previous-page" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item active" aria-current="page">
+                            <span class="page-link" id="current-page">1</span>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" id="next-page" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                            </div>
+        </div>
+    </div>
+
+    <!-- Generic Modal Window Container -->
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close btn-secondary" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Content will be dynamically added here -->
+                    
+                    <img class="img-fluid w-100" src="" id="modalPoster" alt="Movie Poster"><br><br>
+                    <strong>Directed By:</strong> <span id="modalDirectors"></span><br><br>
+                    <p id="modalPlot"></p>
+                    <strong>Cast:</strong> <span id="modalCast"></span><br><br>
+                    <strong>Awards:</strong> <span id="modalAwards"></span><br>
+                    <strong>IMDB Rating:</strong> <span id="modalRating"></span> (<span id="modalVotes"></span> votes)
+<button type="button" class="btn btn-secondary mt-auto ms-auto" data-bs-dismiss="modal">Close</button>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Custom JS -->
+
+    <!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"
+  ></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

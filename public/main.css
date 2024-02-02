@@ -1,0 +1,6 @@
+
+#moviesTable tr:hover {
+    cursor: pointer;
+    background-color: #f2f2f2; /* Light gray color, adjust as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the values as needed */
+}
